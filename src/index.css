@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+body {
+  margin: 0;
+  background: #f8f7f4;
+  color: #1f2328;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.inp{width:100%;border:1px solid #d9d6cf;border-radius:12px;padding:.65rem .8rem;background:#fff;outline:none}
+.inp:focus{border-color:#4f46e5;box-shadow:0 0 0 3px #e0e7ff}
+.card{background:#fff;border:1px solid #e6e3dc;border-radius:20px;box-shadow:0 2px 12px rgba(20,20,40,.05)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.7rem 1.2rem;border-radius:12px;font-weight:600;transition:.15s;cursor:pointer}
+.b1{background:#4f46e5;color:#fff}.b1:hover{background:#4338ca}
+.b2{background:#fff;border:1px solid #d9d6cf}.b2:hover{border-color:#4f46e5;color:#4f46e5}
+.fade{animation:fu .5s ease both}@keyframes fu{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.dash{stroke-dasharray:6 6;animation:dm 1s linear infinite}@keyframes dm{to{stroke-dashoffset:-12}}
+.grow{animation:gw .9s ease both;transform-origin:left}@keyframes gw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes sp{to{transform:rotate(360deg)}}
+
+button:disabled { cursor: not-allowed; opacity: .55; }
